@@ -1,0 +1,14 @@
+<h1>新規登録（デモ）要件：IDは5桁、emailは適当に</h1>
+
+ <%= form_for @user,:url => {controller: "registers", action: "create"} do |f| %>
+    <p>
+        <%= f.label :uid, 'ユーザＩＤ' %>
+        <%= f.number_field :uid, class: 'form-control' %>
+    </p>
+    <p>
+        <%= f.label :mail, 'メールアドレス' %>
+        <%= f.text_field :mail, class: 'form-control' %>
+    </p>
+    <%= f.submit '新規登録'%>
+  <% end %>
+<%= link_to '一覧', root_path %>

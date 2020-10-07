@@ -1,0 +1,16 @@
+<h1>登録者一覧</h1>
+
+<table>
+  <tr>
+    <th>ＩＤ番号</th>
+    <th>メール</th>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user[:uid] %></td>
+    <td><%= user[:mail] %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to "新規登録", new_register_path %>
