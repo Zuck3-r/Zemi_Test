@@ -18,7 +18,10 @@ class RegistersController < ApplicationController
   
   end
   
-  def update
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
+    redirect_to registers_url
   end
   
   private

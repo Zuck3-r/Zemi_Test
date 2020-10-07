@@ -4,11 +4,13 @@
   <tr>
     <th>ＩＤ番号</th>
     <th>メール</th>
+    <th>削除</th>
   </tr>
 <% @users.each do |user| %>
   <tr>
     <td><%= user[:uid] %></td>
     <td><%= user[:mail] %></td>
+    <td><%= link_to '削除', "/users/#{user.id}", method: :delete %></td>
   </tr>
 <% end %>
 </table>
