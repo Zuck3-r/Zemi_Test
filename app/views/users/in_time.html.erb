@@ -1,0 +1,5 @@
+<h1>入室時間の打刻</h1>
+ <%= form_for @user,:url => {controller: "users", action: "punch_in_time"} do |f| %>
+    <%= f.submit '打刻'%>
+ <% end %>
+<%= link_to '一覧', root_path %>

@@ -1,0 +1,26 @@
+<h1>一覧</h1>
+
+<table>
+  <tr>
+    <th>ＩＤ番号</th>
+    <th>メール</th>
+    <th>部屋</th>
+    <th>入室時間</th>
+    <th>退出時間</th>
+    <th>入室決定</th>
+    <th>退出決定</th>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.uid %></td>
+    <td><%= user.mail %></td>
+    <td>hoge</td>
+    <td>hoge</td>
+    <td>hoge</td>
+    <td><%= link_to '打刻', "/users/#{user.id}/in_time" %></td>
+    <td>hoge</td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to '人の追加', new_user_path %>
